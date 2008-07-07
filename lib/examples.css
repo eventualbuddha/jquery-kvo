@@ -1,0 +1,15 @@
+.example {
+  border: 1px solid #aaa;
+  width: 450px;
+  float: left;
+  padding: 0 10px 0 10px;
+}
+
+div.code {
+  color: #eee;
+  background-color: #333;
+  font-family: Monaco, Courier;
+  font-size: .9em;
+  padding: 10px;
+  margin: 10px 0;
+}

@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src="lib/accessors.vbs" language="vbscript" charset="utf-8"></script>
+    <script src="lib/jquery-1.2.6.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/jquery-accessors.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/jquery-kvo.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="lib/examples.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <h1>jQuery KVO Examples</h1>
+    
+    <div id="simple" class="example">
+      <h3>Simple Bindings</h3>
+      
+      <p>
+        This example illustrates a very basic setup for key-value binding.
+      </p>
+      
+      <p>
+        This bit is updated:
+      </p>
+      
+      <!-- <example> -->
+      <div style="font-size:1.4em">
+        <b>Name:</b> <span bind="simple.name"></span>
+      </div>
+      <!-- </example> -->
+      
+      <p>
+        When this textbox is changed:
+      </p>
+      
+      <input type="text" id="simple-kvo-name" bind="simple.name" style="font-size:1.4em" />
+      
+      <div class="html code">
+        Name: &lt;span bind="simple.name"&gt;&lt;/span&gt;
+      </pre>
+      
+      <script type="text/javascript" charset="utf-8">
+        window.simple = $.kvo.build({name: "Frank"});
+        
+        $('#simple-kvo-name').bind('keyup', function() {
+          simple.name = $(this).val();
+        });
+      </script>
+    </div>
+  </body>
+</html>
