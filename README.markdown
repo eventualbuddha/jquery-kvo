@@ -31,3 +31,7 @@ How do I start using it?
 You can use it as in the above examples (also check out `examples.html`), but the easiest way to set everything up is with custom attributes on elements. Doing it this way, the above example becomes:
 
     <h1 bind="profile.name"></h1>
+
+Creating the `profile` object is easy too:
+
+    window.profile = $.kvo.build({name: "eventualbuddha"});
