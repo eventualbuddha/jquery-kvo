@@ -34,7 +34,7 @@
       
       <div class="html code">
         Name: &lt;span bind="simple.name"&gt;&lt;/span&gt;
-      </pre>
+      </div>
       
       <script type="text/javascript" charset="utf-8">
         var simple = $.kvo.build({name: "Frank"});
@@ -43,6 +43,48 @@
           simple.name = $(this).val();
         });
       </script>
+    </div>
+    
+    <div id="visibility" class="example">
+      <h3>Binding Visibility</h3>
+      
+      <p>
+        This example shows how to show/hide something using key-value binding.
+      </p>
+      
+      <p>
+        This is only visible:
+      </p>
+      
+      <!-- <example> -->
+      <div style="font-size:1.4em; color:red" bind="visi.visible" bind-to="visible">
+        HELLO
+      </div>
+      <!-- </example> -->
+      
+      <p>
+        When this is checked:
+      </p>
+      
+      <label>
+        <input type="checkbox" id="visi-checkbox" bind="visi.visible" /> Visible?
+      </label>
+      
+      <div class="html code">
+        &lt;div bind="visi.visible" bind-to="visible"&gt;<br/>
+        &nbsp;&nbsp;HELLO<br/>
+        &lt;/div&gt;
+      </div>
+      
+      <script type="text/javascript" charset="utf-8">
+        var visi = $.kvo.build({visible: true});
+        
+        $('#visi-checkbox').bind('click', function() {
+          visi.visible = $(this).attr('checked');
+        });
+      </script>
+      
+      <div class="html"></div>
     </div>
   </body>
 </html>
