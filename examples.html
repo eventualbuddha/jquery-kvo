@@ -37,7 +37,7 @@
       </pre>
       
       <script type="text/javascript" charset="utf-8">
-        window.simple = $.kvo.build({name: "Frank"});
+        var simple = $.kvo.build({name: "Frank"});
         
         $('#simple-kvo-name').bind('keyup', function() {
           simple.name = $(this).val();
