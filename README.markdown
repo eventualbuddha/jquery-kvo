@@ -1,6 +1,8 @@
 jQuery KVO
 ==========
 
+**NOTE: This project is dead. Use [Ember](http://emberjs.com/), [Angular](http://angularjs.org/), or something similar.**
+
 This project contains two plugins that together can be used to get key-value observing and binding, as inspired by Cocoa and SproutCore.
 
 What's key-value observing?
